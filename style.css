@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.background-img {
+  background-image: url(images/img4.jpg);
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+nav {
+  height: 100%;
+  width: 24%;
+}
+
+.burger {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(
+    to bottom right,
+    rgb(227, 229, 253),
+    rgb(255, 255, 255)
+  );
+  opacity: 1;
+  height: 81px;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+.nav-list {
+  display: flex;
+  height: 100%;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 26px;
+}
+
+.nav-list li a:hover {
+  background-color: rgb(225, 231, 248);
+  transition: all 0.4s ease;
+}
+
+.header {
+  width: 20%;
+  color: black;
+  margin-left: -80px;
+}
+
+.logo {
+  position: absolute;
+  left: 4%;
+  top: -7%;
+}
+
+img {
+  height: 50vh;
+  width: 523px;
+  margin: 15px;
+}
+
+.sectionLeft {
+  margin: 13px 80px;
+  padding: 27px 26px;
+  width: 57%;
+  background-color: rgb(241, 242, 255);
+}
+
+.heading {
+  font-size: 20px;
+  padding: 4px 9px;
+  border-left: 7px solid rgb(155, 155, 255);
+  background-color: rgb(214, 214, 214);
+}
+
+.BlogContent {
+  margin: 17px 0px 0px 17px;
+}
+
+.btn {
+  width: 140px;
+  height: 43px;
+  margin-top: 10px;
+  font-size: 17px;
+  background-color: rgb(155, 155, 255);
+  border: none;
+  border-radius: 5px;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+.galleryCard {
+  width: 220px;
+  padding: 2px 0 18px 0;
+  margin: 25px 8px;
+  background-color: white;
+  text-align: center;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+.galleryCard:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.144),
+    0 7px 25px 0 rgba(0, 0, 0, 0.158);
+  transition: all 0.3s;
+}
+
+.gal-img img {
+  width: 90%;
+  height: 158px;
+}
+
+.desc {
+  padding: 5px;
+  text-align: center;
+}
+
+.galContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sectionRight {
+  width: 40%;
+  height: 100%;
+  margin: 103px 44px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-sec {
+  position: absolute;
+  top: 95%;
+  right: 2%;
+  width: 38%;
+  z-index: 1;
+  background-color: rgb(241, 242, 255);
+}
+
+.rightsecblog {
+  margin-bottom: 20px;
+  height: 900px;
+  overflow: auto;
+}
+
+.blogsec {
+  display: flex;
+}
+
+.right-col {
+  display: flex;
+  flex-direction: row;
+}
+
+.accordion {
+  background-color: rgb(206, 216, 255);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+  background-color: rgb(191, 199, 245);
+}
+
+.panel {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  /* background-color: rgb(241, 242, 255); */
+}
+
+.footer {
+  width: 100%;
+  height: 12vh;
+  padding: 37px;
+  text-align: center;
+  background-color: rgb(235, 235, 235);
+}
+
+.contact-form {
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.contact-form input {
+  padding: 3px;
+  background-color: rgb(242, 244, 250);
+  border: 1px solid rgb(138, 137, 137);
+  border-radius: 3px;
+}
+
+.contact-form textarea {
+  padding: 3px;
+  background-color: rgb(242, 244, 250);
+  border: 1px solid rgb(138, 137, 137);
+  border-radius: 3px;
+}
+
+.form-btn {
+  width: 76px;
+  height: 33px;
+  margin-top: 10px;
+  font-size: 17px;
+  background-color: rgb(155, 155, 255);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar {
+  cursor: pointer;
+  position: absolute;
+  top: 32%;
+  right: 36%;
+  font-size: 20px;
+}
+
+.search-In input {
+  opacity: 0;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid black;
+  background-color: rgba(234, 234, 248, 0);
+  pointer-events: none;
+}
+
+.search-bar.open {
+  font-size: 15px;
+  transform: translate(-70px, -17px);
+  transition: all 0.4s ease;
+}
+
+.search-In input.open {
+  opacity: 1;
+  transition: all 0.2s ease;
+  pointer-events: all;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 13px;
+  }
+
+  .navbar {
+    height: 90px;
+  }
+
+  .header {
+    width: 100%;
+    margin-left: 86px;
+  }
+
+  .logo {
+    left: 1%;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    width: 100%;
+    height: 49vh;
+    background: linear-gradient(
+      to bottom left,
+      rgb(255, 255, 255),
+      rgb(227, 229, 253)
+    );
+    opacity: 1;
+    flex-direction: column;
+    clip-path: circle(100px at 90% -30%);
+    -webkit-clip-path: circle(100px at 90% -30%);
+    transition: all 0.7s ease-in;
+  }
+
+  .search-bar {
+    top: 8%;
+    right: 43%;
+  }
+
+  .search-bar.open {
+    transform: translate(-12px, -17px);
+  }
+
+  .nav-list.open {
+    clip-path: circle(1000px at 90% -30%);
+    -webkit-clip-path: circle(1000px at 90% -30%);
+  }
+
+  .burger {
+    display: block;
+    position: absolute;
+    top: 33px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  .line {
+    width: 28px;
+    height: 4px;
+    margin: 4px;
+    border-radius: 2px;
+    background-color: black;
+  }
+
+  .sectionLeft {
+    margin: 13px 0px;
+    padding: 27px 26px;
+    width: 100%;
+  }
+
+  img {
+    height: 35vh;
+    width: 400px;
+    margin: 15px;
+  }
+
+  .galContainer {
+    justify-content: center;
+  }
+
+  .galleryCard {
+    width: 125px;
+    height: 135px;
+    padding: 0px 20px 150px 0px;
+    margin: 30px 20px 0px 0px;
+  }
+
+  .gal-img img {
+    width: 100%;
+    height: 80px;
+    margin: 9px 0px 0px 10px;
+  }
+
+  .desc {
+    padding: 5px 5px 5px 5px;
+  }
+
+  .blogsec {
+    flex-direction: column;
+  }
+  .sectionRight {
+    width: 100%;
+    height: 100%;
+    margin: 152px 0px;
+    padding: 27px 26px;
+  }
+
+  .sub-sec {
+    position: unset;
+    width: 100%;
+  }
+}
